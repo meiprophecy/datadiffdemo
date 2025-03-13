@@ -1,0 +1,39 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: FirstName
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the individual
+      mappings: []
+      tags: []
+  - name: LastName
+    type: string
+    nullable: true
+    metadata:
+      description: The surname of the individual
+      mappings: []
+      tags: []
+  - name: Age
+    type: integer
+    nullable: true
+    metadata:
+      description: The age of the individual
+      mappings: []
+      tags: []
+  - name: Class
+    type: double
+    nullable: true
+    metadata:
+      description: The academic class or grade level of the individual
+      mappings: []
+      tags: []
+  - name: City
+    type: string
+    nullable: true
+    metadata:
+      description: The city where the individual resides
+      mappings: []
+      tags: []

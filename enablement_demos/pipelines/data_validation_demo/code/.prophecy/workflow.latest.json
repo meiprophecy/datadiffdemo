@@ -1,0 +1,485 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.9.0-SNAPSHOT",
+        "pyPiVersion" : "1.9.37"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/data_validation_demo",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "data_validation_demo",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "157",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "meiprophecyioteam.enablementdemos.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "224",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "225",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "data_validation_demo",
+    "configTopLevelPackage" : "data_validation_demo",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "zJiMj6LlchXfxO9vKi88y$$4lg_OjwY9jjFzCkxUabcA",
+    "source" : "dZBvrd_KgDI7Wj5wMB0mW$$l_bRO8BbqNNuTRyDcKbq4",
+    "sourcePort" : "EQJVBdUzxyOaCIMlGtwmZ$$ZO3H9jMerulPJ-P90KrKb",
+    "target" : "l0Kaau1lX5swX7z4CDnEd$$o8l3LAP5Da9RwGlp3Rs_J",
+    "targetPort" : "Lu7tTWsirn7pfuvvN77nl$$PaiZLA5g4MjbaL04C44yH"
+  }, {
+    "id" : "tSC62_U9qdXZpQqaNIi52$$fTz8ciDyUYHcX6y9W58VT",
+    "source" : "W7duvh_zq9iNcvOlGutFj$$ccu0v2Lr1RFwDID7JHXkd",
+    "sourcePort" : "vYFdyPNzRQqCkSM-yPTe2$$VA-EQL9ODp1AL3j8jPTYT",
+    "target" : "s06yVjFORrcLI1Jl4mfWr$$-GaJtRFjzULsSWt0NB1sz",
+    "targetPort" : "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub"
+  }, {
+    "id" : "nkZgf11bY_kYhVINKpagM$$msG1sii66as0Uo6fNu3sd",
+    "source" : "s06yVjFORrcLI1Jl4mfWr$$-GaJtRFjzULsSWt0NB1sz",
+    "sourcePort" : "O7gH4zzuR6_EoJeqc5z5d$$-yhX3qZpRDD0Nt6cLCkzK",
+    "target" : "O6bZ7sNh1IA1iIu2JIfAe$$AH1EuqlPTBXqxNndAu_AN",
+    "targetPort" : "mFMMRbQkfOl2oGAmHkl2O$$ILuayC17QRbNbmp96v9dI"
+  } ],
+  "processes" : {
+    "l0Kaau1lX5swX7z4CDnEd$$o8l3LAP5Da9RwGlp3Rs_J" : {
+      "id" : "l0Kaau1lX5swX7z4CDnEd$$o8l3LAP5Da9RwGlp3Rs_J",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "expected_students",
+        "slug" : "expected_students",
+        "x" : -340,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Compares generated student data with expected data to ensure accuracy and consistency in records.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Lu7tTWsirn7pfuvvN77nl$$PaiZLA5g4MjbaL04C44yH",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FirstName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The age of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Class",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The academic class or grade level of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The city where the individual resides",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/student2"
+      },
+      "diff" : {
+        "configured" : true,
+        "keyColumns" : [ "FirstName", "LastName" ],
+        "sourceType" : "Parquet",
+        "parquet" : {
+          "location" : "dbfs:/demos/datadiff/students2parq/"
+        },
+        "catalogTable" : {
+          "catalog" : "",
+          "schema" : "",
+          "table" : ""
+        },
+        "joinType" : "OuterJoin"
+      }
+    },
+    "O6bZ7sNh1IA1iIu2JIfAe$$AH1EuqlPTBXqxNndAu_AN" : {
+      "id" : "O6bZ7sNh1IA1iIu2JIfAe$$AH1EuqlPTBXqxNndAu_AN",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "fixed_data",
+        "slug" : "fixed_data",
+        "x" : -220,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Stores processed data in a reliable format and compares it with expected data to ensure accuracy and consistency.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "mFMMRbQkfOl2oGAmHkl2O$$ILuayC17QRbNbmp96v9dI",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FirstName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The age of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Class",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The class level of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "City",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical area where the individual is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/fixed_data"
+      },
+      "diff" : {
+        "configured" : true,
+        "keyColumns" : [ "FirstName", "LastName" ],
+        "sourceType" : "Parquet",
+        "parquet" : {
+          "location" : "dbfs:/demos/datadiff/students1parq/"
+        },
+        "catalogTable" : {
+          "catalog" : "",
+          "schema" : "",
+          "table" : ""
+        },
+        "joinType" : "OuterJoin"
+      }
+    },
+    "s06yVjFORrcLI1Jl4mfWr$$-GaJtRFjzULsSWt0NB1sz" : {
+      "id" : "s06yVjFORrcLI1Jl4mfWr$$-GaJtRFjzULsSWt0NB1sz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformat_customer_info",
+        "slug" : "reformat_customer_info",
+        "x" : -380,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Transforms customer data for clearer presentation, renaming regions to cities for better understanding.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FirstName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The first name of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LastName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The surname of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Age",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The age of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Class",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The class level of the individual",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "Region",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Geographical area where the individual is located",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "O7gH4zzuR6_EoJeqc5z5d$$-yhX3qZpRDD0Nt6cLCkzK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "FirstName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "FirstName"
+          },
+          "description" : ""
+        }, {
+          "target" : "LastName",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "LastName"
+          },
+          "description" : ""
+        }, {
+          "target" : "Age",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Age"
+          },
+          "description" : ""
+        }, {
+          "target" : "Class",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Class"
+          },
+          "description" : ""
+        }, {
+          "target" : "City",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "Region"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub##FirstName", "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub##LastName", "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub##Class", "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub##Region", "jcVHVw7_4e-y4dw00ZCjx$$KD9nTC3HL8ZpdVl4QLBub##Age" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/wDp16mGH_team_30/QWF0O8MX_project_224.git&subPath=&tag=0.2.42.dev5&projectSubscriptionProjectId=224&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "W7duvh_zq9iNcvOlGutFj$$ccu0v2Lr1RFwDID7JHXkd" : {
+      "id" : "W7duvh_zq9iNcvOlGutFj$$ccu0v2Lr1RFwDID7JHXkd",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "expected_students2",
+        "slug" : "expected_students2",
+        "x" : -560,
+        "y" : -140,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "vYFdyPNzRQqCkSM-yPTe2$$VA-EQL9ODp1AL3j8jPTYT",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/samplestudent2"
+      }
+    },
+    "dZBvrd_KgDI7Wj5wMB0mW$$l_bRO8BbqNNuTRyDcKbq4" : {
+      "id" : "dZBvrd_KgDI7Wj5wMB0mW$$l_bRO8BbqNNuTRyDcKbq4",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "generated_students1",
+        "slug" : "generated_students1",
+        "x" : -560,
+        "y" : -300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads student data from a parquet file for analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "EQJVBdUzxyOaCIMlGtwmZ$$ZO3H9jMerulPJ-P90KrKb",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/students1"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
